@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background: rgb(24, 24, 24);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header and navbar */
+
+.header{
+    background: #073b4c;
+    /* border-bottom: 5px solid black; */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+/* Hamburger styles */
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #caf0f8;
+}
+
+/* basic styles */
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.nav-link:hover{
+    padding-bottom: 5px;
+    border-bottom: 3px solid #caf0f8;
+}
+
+/* Responsive Navbar */
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #073b4c;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+}
+
+/* Inside the media query */
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .container{
+        min-height: 94vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(Background.mp4);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #myBtn{
+        font-family: 'Inconsolata', monospace;
+        font-weight: bold;
+        padding: 10px 15px 10px 15px;
+        background: #073b4c;
+        opacity: 0.95;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        border-radius: 4px;
+        /* background: #FCE97F;
+        animation: fadebackground 6s infinite; */
+    }
+    #myBtn:hover{
+        padding: 12px 17px 12px 17px;
+        background: rgb(255,255,255, 0.2);
+
+    }
+    /* @keyframes fadebackground {
+        from {background-color: #073b4c;}
+        to {background-color: #6998AB;}
+      } */
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      }
+
+span{
+    font-family: 'Poppins', sans-serif;
+    color: #caf0f8;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+span:hover {
+    color: #fff;
+}
